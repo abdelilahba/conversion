@@ -1,0 +1,74 @@
+body {
+    background-image: url("img1.jpg");
+    background-size: cover;
+}
+
+.div1>select {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-top: 5%;
+    background-color: rgb(212, 204, 204);
+}
+
+.div1>select>option {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    background-color: rgb(212, 204, 204);
+}
+
+.div4>select {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 40%;
+    background-color: rgb(212, 204, 204);
+    margin-top: 5%;
+}
+
+.div4>select>option {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    height: 400px;
+    background-color: rgb(212, 204, 204);
+}
+
+.div2>input {
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    height: 100px;
+    margin-top: 0%;
+    background-color: rgb(212, 204, 204);
+}
+
+.div3>button {
+    margin-left: 43%;
+    width: 200px;
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(212, 204, 204);
+}
+
+#btn1 {
+    margin-top: 1.5%;
+}
+
+#btn2 {
+    margin-top: 1%;
+}
+
+.div2>#tx1 {
+    margin-top: 10%;
+}

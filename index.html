@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div1">
+        <select id="sl1">
+        <option value="km">KILOMETRE</option>
+        <option value="hm"> HICTOMITRE </option>
+        <option value="dam"> DECAMETRE</option>
+        <option value="m"> METRE </option>
+        <option value="dm"> DICIMETRE</option>
+        <option value="cm">CENTEMETRE</option>
+        <option value="mm">MILIMETRE</option>
+    </select>
+    </div>
+
+    <div class="div2">
+        <input type="text" name="" id="tx1" placeholder="SAISI YOUR VALUE"> <br>
+        <input type="text" name="" id="tx2" placeholder="RESULTAT">
+    </div>
+    <div class="div3">
+        <button id="btn1">CONVERTIR</button> <br>
+        <button id="btn2">INIALISER</button>
+    </div>
+    <div class="div4">
+        <select id="sl2">
+        <option value="km">KILOMETRE</option>
+        <option value="hm">HICTOMITRE</option>
+        <option value="dam">DECAMETRE</option>
+        <option value="m">METRE</option>
+        <option value="dm">DICIMETRE</option>
+        <option value="cm">CENTEMETRE</option>
+        <option value="mm">MILIMETRE</option>
+    </select>
+    </div>
+    <script>
+        var sl1 = document.getElementById("sl1");
+        var sl2 = document.getElementById("sl2");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var txt1 = document.getElementById("tx1");
+        var txt2 = document.getElementById("tx2");
+        var a = 0;
+        window.onload = function() {
+            sl1.value = "m";
+            sl2.value = "m";
+        }
+        btn1.onclick = function() {
+            switch (sl1.value) {
+                case "km":
+                    a = txt1.value * Math.pow(10, 3)
+                    break;
+                case "hm":
+                    a = txt1.value * Math.pow(10, 2)
+                    break;
+                case "dam":
+                    a = txt1.value * Math.pow(10, 1)
+                    break;
+                case "m":
+                    a = txt1.value
+                    break;
+                case "dm":
+                    a = txt1.value * Math.pow(10, -1)
+                    break;
+                case "cm":
+                    a = txt1.value * Math.pow(10, -2)
+                    break;
+                case "mm":
+                    a = txt1.value * Math.pow(10, -3)
+                    break;
+            }
+            /* PARTIE 2  */
+            switch (sl2.value) {
+                case "km":
+                    txt2.value = a * Math.pow(10, -3)
+                    break;
+                case "hm":
+                    txt2.value = a * Math.pow(10, -2)
+                    break;
+                case "dam":
+                    txt2.value = a * Math.pow(10, -1)
+                    break;
+                case "m":
+                    a = txt1.value
+                    break;
+                case "dm":
+                    txt2.value = a * Math.pow(10, 1)
+                    break;
+                case "cm":
+                    txt2.value = a * Math.pow(10, 2)
+                    break;
+                case "mm":
+                    txt2.value = a * Math.pow(10, 3)
+                    break;
+            }
+        }
+        btn2.onclick = function() {
+            txt1.value = "";
+            txt2.value = "";
+            sl1.value = "m";
+            sl2.value = "m";
+        }
+    </script>
+</body>
+
+</html>
